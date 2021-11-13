@@ -1,66 +1,64 @@
-### **👋 Welcome.**
+###**👋 Bienvenido.**
+Lo has logrado, ¡Enhora buena! Bienvenido :). Mi nombre es Farza y solo soy el chico que charlará contigo aquí.
 
-You've made it — hell yeah! Welcome :). My name is Farza and I’m just the guy who will be chatting with yah here.
+Este proyecto es para desarrolladores que quieran ingresar a Solana, que hoy en dia es una de las cadenas de bloques más grandes del mundo.
 
-This project is for devs that want to get into Solana which is now one of the biggest blockchains in the world.
+Todo lo que realmente necesitas saber para  entrar en esto son algunas habilidades de consola de comandos(CLI) , algo de javascript y algo de React.js. El resto lo iras aprendiendo en el camino. Por los momentos no se requiere conocimiento de Rust.
 
-All you really need to know going into this is **some terminal skills, some javascript, and some React.js**. You'll pick up the rest along the way. **No Rust knowledge required.**
+Pasos a ejecutar antes de continuar:
+1. **Conecta el Discord en el panel del proyecto.** Todas las cosas buenas sucederán en una categoría secreta en Discord a la que solo tendrás acceso una vez que conectes tu Discord.
+2. **Conecta vuestra billetera Ethereum en el panel del proyecto.** ¡Le enviaremos un NFT por caida de aire o air-drop una vez que esto termine, y si no tienes una billetera conectada, no podremos enviarlo por caida de aire! **Planeamos hacer NFTs en Solana**, pero, por ahora, todo nuestro sistema está construido en Ethereum/Polygon, así que ahí es donde enviaremos nuestros NFT :).
+3. **Asegúrese de asistir al inicio en vivo**. Si te lo pierdes, no te preocupes. ¡No es necesario asistir! La grabación se publicará en Discord en la seccion **#info-board**.
 
-Few action items for you before moving on:
+###**🛠 El proyecto.**
 
-1. **Connect your Discord in the project dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to once you connect your Discord.
-2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you!! **We plan to do NFTs on Solana**, but, for now our whole system is built on Ethereum/Polygon so that's where we'll send the NFTs :).
-3. **Be sure to attend the live kick-off**. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord under **#info-board**.
+Entonces, ¿qué construiremos aquí :)? Para muestra un pequeño video:
 
-### **🛠 The project.**
+[loom] (https://www.loom.com/share/545522add8514005a91ececac5abdab2)
 
-So what will we be building here :)? Here's a little video:
+###**💎 Ganate un NFT.**
 
-[Loom](https://www.loom.com/share/545522add8514005a91ececac5abdab2)
+Cuando llegues al final de este proyecto, te podrás ganar un NFT.
 
-### **💎 Earning an NFT.**
+**Enviaremos un NFT a tu billetera conectada si finalizas el proyecto dentro de los 7 días posteriores al inicio.**
 
-When you reach the end of this project, you'll be able to earn an NFT.
+[loom] (https://www.loom.com/share/34fdda64cee643c7ba3e0e936e8a7c73)
 
-**We'll airdrop an NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
+** Nota: cada serie lleva el nombre de una estrella (por ejemplo, [Alkes] (https://www.star-facts.com/alkes/), [Beid] (https://www.universeguide.com/star/19587/beid), etc)! Además, el # en la parte inferior será el # de NFT grabado que dependera de cuándo termines! Cada NFT es único.**
 
-[Loom](https://www.loom.com/share/34fdda64cee643c7ba3e0e936e8a7c73)
+### **🤚 Cómo obtener ayuda.**
 
-**Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # at the bottom will be the # minted which depends on when you finish! Each NFT is unique.** 
+Cuando tengas una pregunta, selecciona el canal adecuado en Discord segun el proyecto.
 
-### **🤚 How to get help.**
+Este proyecto se divide en 4 secciones. Puedes ver en qué sección te encuentras consultando la barra de progreso justo en la parte superior de la página,  en tu panel de Builsdpace. Entonces, por ejemplo, si está atascado en alguna parte de la Sección 3, presionarías `# section-3-help` en Discord. Si formas parte de varios proyectos, asegúrate de hacer tus preguntas en la categoría del proyecto que corresponda.
 
-When you have a question, hit up the proper channel for the project.
+### **🤘 ¿Ves un problema? o ¿Quieres mejorar algo? Arréglalo tú mismo;).**
 
-This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page in your buildspace dashboard. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord. If you're part of multiple projects, be sure to ask your questions in the right project category!
+**[Todo este contenido es completamente de código abierto(Open Source)] (https://github.com/buildspace/buildspace-projects) **. Si ves un problema, un error ortográfico, etc., ¡puedes solucionarlo tú mismo fácilmente y hacer un PR! Si necesitas ayuda para hacer esto, DM `@ alec` en Discord :).
 
-### **🤘 See an issue? Want to improve something? Fix it yourself ;).**
+¡Por lo menos, coloque una ⭐ en el repositorio si te sientes elegante!
 
-**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :).
+¡Vamos a conseguirte un representante de código abierto!
 
-At the very least, drop a ⭐ on the repo if you're feeling fancy!
+### 👀 ** ¿Tienes curiosidad de trabajar en web3? **
 
-Let's get you some open-source rep!!!
+**La gente parece pensar que web3 solo necesita personas que puedan codificar contratos inteligentes o escribir código que interactúe con la cadena de bloques. Y no es verdad.**
 
-### 👀 **Curious about working in web3?**
+Hay mucho trabajo por hacer y la mayor parte del trabajo ni siquiera tiene que ver con contratos inteligentes jajaja. Ser un ingeniero en web3 solo significa que debes tomar tus habilidades de web2 y aplicarlas a web3.
 
-**People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
+Web3 también necesita desesperadamente diseñadores, gerentes de producto, especialistas en marketing y mucho más.
 
-There is so much work to do and most of the work doesn't even have to do w/ smart contracts lol. Being an engineer in web3 just means you take your web2 skills and apply them to web3.
+**Estamos asociados con un grupo de empresas increíbles de web3 que desean contratar personas de la red de buildspace. **
 
-Web3 also desperately needs designers, product managers, marketers, and more.
+Tenemos de aliados a empresas como OpenSea, Edge and Node y Chainlink. **Incluso si solo tienes curiosidad**, haz clic en "Trabajar en Web3" en la barra lateral, completa el formulario rápidamente y observa las oportunidades.
 
-**We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network.**
+En el peor de los casos, puedes hablar con gente realmente genial en web3.
 
-We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunities!!
+Hazlo rápido ahora mismo :).
 
-Worst case scenario, you get to talk to some really cool people in web3.
+###🚨 Informe de Avance
 
-Just do it really quick right now :).
+*Por favor, haz esto de lo contrario Farza estará triste: (*
 
-### 🚨 Progress Report
-
-*Please do this else Farza will be sad :(*
-
-Hey! This project is all about GIFs, go ahead and post a GIF you like in `#progress` in the Discord. I like [Giphy](https://giphy.com) for all my GIF needs :).
+¡Escucha! Este proyecto tiene que ver todo con los GIF, asi que adelante, ve a Discord y publica un GIF que a ti mas te guste. A mi me gusta [Giphy] (https://giphy.com) para todas mis necesidades de GIF :).
 **
