@@ -1,6 +1,6 @@
 # Lesson_1_What_Are_We_Building
 ###**👋 Bienvenido.**
-Lo has logrado, ¡Enhora buena! Bienvenido :). Mi nombre es Farza y solo soy el chico que charlará contigo aquí.
+Lo has logrado, ¡Enhora buena! :). Mi nombre es Farza y solo soy el chico que charlará contigo aquí.
 
 Este proyecto es para desarrolladores que quieran ingresar a Solana, que hoy en dia es una de las cadenas de bloques más grandes del mundo.
 
