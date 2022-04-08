@@ -6,7 +6,7 @@ We're going to kick things off w/ one of the most magical things about web3, con
 
 We'll allow our user to essentially "auth" with their Solana wallet. Building auth is usually pretty hard. You need to have a database of usernames, password, etc.
 
-In this case it's is **a lot** easier than you may think! Here's the plan:
+In this case it's **a lot** easier than you may think! Here's the plan:
 
 1. Get the base web app code for this project (I provided some starter HTML/CSS so you can focus on the things that truly matter lol).
 2. Write the code that will allow users to connect their Solana wallet and connect to your app to setup a basic "auth" state.
@@ -54,7 +54,7 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 
 Here's a quick video I made for a different project going over some Replit basics:
 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
 Just like that, you have a frontend setup for your web3 app 😎.
 

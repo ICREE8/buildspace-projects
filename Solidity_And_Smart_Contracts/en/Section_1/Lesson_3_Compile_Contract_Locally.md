@@ -29,7 +29,7 @@ So, this is what **`run.js`** is going to have:
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
   console.log("Contract deployed to:", waveContract.address);
@@ -38,11 +38,12 @@ const main = async () => {
 const runMain = async () => {
   try {
     await main();
-    process.exit(0);
+    process.exit(0); // exit Node process without error
   } catch (error) {
     console.log(error);
-    process.exit(1);
+    process.exit(1); // exit Node process while indicating 'Uncaught Fatal Exception' error
   }
+  // Read more about Node exit ('process.exit(num)') status codes here: https://stackoverflow.com/a/47163396/7974948
 };
 
 runMain();
@@ -81,7 +82,7 @@ console.log("Contract deployed to:", waveContract.address);
 
 Finally, once it's deployed `waveContract.address`  will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. There are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will be more important a bit later once we deploy to a real Ethereum network.
 
-Lets run it!
+Let's run it!
 
 ```bash
 npx hardhat run scripts/run.js
@@ -95,7 +96,7 @@ You should see your `console.log` run from within the contract and then you shou
 🎩 Hardhat & HRE
 ----------------
 
-In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this? 
+In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of magic trick is this? 
 
 Directly from the Hardhat docs themselves you will notice this:
 

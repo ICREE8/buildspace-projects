@@ -86,10 +86,10 @@ You'll need the public address associated w/ your Phantom wallet which you can g
 Now, go ahead and run this from your terminal.
 
 ```bash
-solana airdrop 5 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url https://api.devnet.solana.com
+solana airdrop 2 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url devnet
 ```
 
-Now, when you go back to your Phantom wallet you should have 5 SOL associated w/ your devnet wallet. Nice :).
+Now, when you go back to your Phantom wallet you should have 2 SOL associated w/ your devnet wallet. Nice :).
 
 ### 🍔 Setup a Solana `provider` on our web app.
 
@@ -106,6 +106,38 @@ Before we can interact with the packages that we installed earlier, we need to i
 ```javascript
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
+```
+
+*Note (only for Replit users):*  
+*1. If you get an error `global is not defined`, change the vite.config.js into:*
+```javascript
+import reactRefresh from '@vitejs/plugin-react-refresh';
+import { defineConfig } from "vite";
+/**
+ * https://vitejs.dev/config/
+ * @type { import('vite').UserConfig }
+ */
+export default defineConfig({
+  define: {
+    global: {},
+    process: {
+      'env': {}
+    } 
+  },
+  plugins: [reactRefresh()],
+  server: {
+    host: '0.0.0.0',
+    hmr: {
+      port: 443,
+    }
+  }
+})
+```
+
+*2. If you get an error related to `buffer`, add it to `App.jsx`:*
+```javascript
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;
 ```
 
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
@@ -171,7 +203,7 @@ const App = () => {
 
 All pretty straightforward and things will make more sense as we start using these variables later. 
 
-`SystemProgram` is the a reference to the [core program](https://docs.solana.com/developing/runtime-facilities/programs#system-program) that runs Solana we already talked about. `Keypair.generate()` gives us some parameters we need to create the `BaseAccount` account that will hold the GIF data for our program.
+`SystemProgram` is a reference to the [core program](https://docs.solana.com/developing/runtime-facilities/programs#system-program) that runs Solana we already talked about. `Keypair.generate()` gives us some parameters we need to create the `BaseAccount` account that will hold the GIF data for our program.
 
 Then, we use `idl.metadata.address` to get our program's id and then we specify that we want to make sure we connect to devnet by doing `clusterApiUrl('devnet')`.
 
@@ -274,7 +306,7 @@ Then, we just need to change up `renderConnectedContainer` to account for two ca
 
 ```jsx
 const renderConnectedContainer = () => {
-	// If we hit this, it means the program account hasn't be initialized.
+// If we hit this, it means the program account hasn't been initialized.
   if (gifList === null) {
     return (
       <div className="connected-container">
@@ -318,7 +350,7 @@ const renderConnectedContainer = () => {
 }
 ```
 
-Pretty straightforward! I made some changes in `[gifList.map](http://gifList.map)`. Watch out for those!
+Pretty straightforward! I made some changes in `gifList.map`. Watch out for those!
 
 ### 🥳 Let's test!
 

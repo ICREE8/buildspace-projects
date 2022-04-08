@@ -32,7 +32,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
 }
 ```
@@ -72,7 +72,7 @@ But, what's an ABI? Much earlier I mentioned how when you compile a contract, it
 
 🏠 Setting Your Contract Address
 -----------------------------
- 
+
 Remember when you deployed your contract to the Rinkeby Testnet (epic btw)? The output from that deployment included your smart contract address which should look something like this:
 
 ```
@@ -81,12 +81,12 @@ Account balance: 3198297774605223721
 WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 ```
 
-You need to get access to this in your React app. It's as easy as creating a new property in your `App.js` file called `contractAddress` and setting it's value to the `WavePortal address` thats printed out in your console:
+You need to get access to this in your React app. It's as easy as creating a new property in your `App.js` file called `contractAddress` and setting its value to the `WavePortal address` thats printed out in your console:
 
 ```javascript
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import './App.css';
+import "./App.css";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -98,9 +98,6 @@ const App = () => {
 
 🛠 Getting ABI File Content
 ---------------------------
-**Rather watch me go through this? Checkout out the video below!**
-[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)
-
 Look at you, already half way down here! Let's move back to our smart contract folder.
 
 When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
@@ -127,12 +124,12 @@ Now that you have your file with all your ABI content ready to go, it's time to 
 ```javascript
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import './App.css';
-import abi from './utils/WavePortal.json';
+import "./App.css";
+import abi from "./utils/WavePortal.json";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
-  
+
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
   /**
    * Create a variable here that references the abi content!
@@ -161,12 +158,12 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
   ```
 
-Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**. 
+Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**.
 
 📝 Writing data
 ---------------
@@ -203,7 +200,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 ```
@@ -219,7 +216,7 @@ When we run this, you'll see that total wave count is increased by 1. You'll als
 
 **NICEEEEEEE :).**
 
-Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with ETH. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear. 
+Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with ETH. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear.
 
 The possibilities are truly endless.
 

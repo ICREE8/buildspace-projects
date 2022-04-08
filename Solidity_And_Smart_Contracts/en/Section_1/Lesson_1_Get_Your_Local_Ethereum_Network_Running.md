@@ -20,11 +20,13 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 ✨ The magic of Hardhat
 ----------------------
 
-1\. We're going to be using a tool called Hardhat a lot. This will let us easily spin up a local Ethereum network and give us fake test ETH and fake test accounts to work with. Remember, it's just like a local server, except the "server" is the blockchain
+1\. We're going to be using a tool called Hardhat a lot. This will let us easily spin up a local Ethereum network and give us fake test ETH and fake test accounts to work with. Remember, it's just like a local server, except the "server" is the blockchain.
 
 2\. Quickly compile smart contracts and test them on our local blockchain.
 
 First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
+
+We recommend running Hardhat using the current LTS Node.js version or you may run into some issues! You can find the current releases [here](https://nodejs.org/en/about/releases/).
 
 Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
 
@@ -38,13 +40,15 @@ npm install --save-dev hardhat
 👏 Get sample project going
 ---------------------------
 
-Cool, now we should have hardhat. Let's get a sample project going.
+Cool, now we should have Hardhat. Let's get a sample project going.
 
 Run:
 
 ```bash
 npx hardhat
 ```
+
+*Note: if you have yarn installed along with npm, you may get errors such as `npm ERR! could not determine executable to run`. In this case, you can do `yarn add hardhat`.*
 
 Choose the option to create a sample project. Say yes to everything.
 

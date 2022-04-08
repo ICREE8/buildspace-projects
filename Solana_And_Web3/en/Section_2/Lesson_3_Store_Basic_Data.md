@@ -26,7 +26,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     // Get a reference to the account.
     let base_account = &mut ctx.accounts.base_account;
     // Initialize total_gifs.
@@ -65,7 +65,7 @@ pub struct BaseAccount {
 }
 ```
 
-This is dope. Basically, it tells our program what kinda of account it can make and what to hold inside of it. So, here, `BaseAccount` holds one thing and it's an integer named `total_gifs`.
+This is dope. Basically, it tells our program what kind of account it can make and what to hold inside of it. So, here, `BaseAccount` holds one thing and it's an integer named `total_gifs`.
 
 Then, here we actually specify how to initialize it and what to hold in our `StartStuffOff` context.
 
@@ -83,6 +83,8 @@ pub struct StartStuffOff<'info> {
 Looks complicated lol.
 
 First we've got `[account(init, payer = user, space = 9000)]`. **All we're doing here is telling Solana how we want to initialize `BaseAccount`.**
+
+Note, if after running your test below you get the error `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64`, you will need to change `space = 9000` to `space = 10000`. If you look at [these docs from anchor](https://project-serum.github.io/anchor/tutorials/tutorial-1.html#defining-a-program) you can see that they define a simple program that declares space = 8 + 8 (eg, 8 kilobytes + 8 kilobytes). The more logic we add to our program, the more space it will take up!
 
 1. `init` will tell Solana to create a new account owned by our current program.
 2. `payer = user` tells our program who's paying for the account to be created. In this case, it's the `user` calling the function. 
@@ -102,7 +104,7 @@ Finally, we have `pub system_program: Program` which is actually pretty freaking
 Lastly, we do this thing in our function where we just grab `base_account` from the `StartStuffOff` context by doing `Context<StartStuffOff>`.
 
 ```rust
-pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
 	// Get a reference to the account.
   let base_account = &mut ctx.accounts.base_account;
 	// Initialize total_gifs.
@@ -173,7 +175,7 @@ runMain();
 
 Most of the script is the same but you'll see I pass `startStuffOff` some important params that we specified in the struct `pub struct StartStuffOff`.
 
-*Note: notice also that in `lib.rs` the function is called `start_stuff_off` since in Rust we use `_` vs camel case. But, over in our javascript file we use camel case and actually call `startStuffOff`. This is something nice Anchor does for us so we can follow best practices regardless of what language we're using. You can use underscores in Rust-land and camel case in JS-land.*
+*Note: notice also that in `lib.rs` the function is called `start_stuff_off` since in Rust we use snake case (`snake_case`) instead of camel case. But, over in our javascript file we use camel case and actually call `startStuffOff`. This is something nice Anchor does for us so we can follow best practices regardless of what language we're using. You can use snake case in Rust-land and camel case in JS-land.*
 
 And perhaps the coolest part about all this is where we call:
 
@@ -204,14 +206,14 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs = 0;
     Ok(())
   }
   
 	// Another function woo!
-  pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+  pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
@@ -259,7 +261,7 @@ Otherwise, I may change data on it within my function but it *wouldn't actually 
 Last, I create a lil `add_gif` function!
 
 ```rust
-pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;

@@ -19,7 +19,7 @@ I've already created a basic react project that you can **fork** on Replit. **Ju
 **Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
 
 I made a quick video going over how to edit code on Replit, deploy, get dark mode. Check it out below: 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
 🦊 Metamask
 -----------
@@ -41,4 +41,4 @@ So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
 *Note: if you don't do this, Farza will be very sad :(.*
 
-Share a link to your website and post it in #progress. Change up the CSS and text to be whatever you want. Maybe you want it to be more colorful? Maybe you don't care above waves and you want to make a decentralized Twitter clone? Do whatever you want this is your app :).
+Share a link to your website and post it in #progress. Change up the CSS and text to be whatever you want. Maybe you want it to be more colorful? Maybe you don't care about waves and you want to make a decentralized Twitter clone? Do whatever you want this is your app :).
