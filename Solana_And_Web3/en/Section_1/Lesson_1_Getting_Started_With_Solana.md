@@ -1,66 +1,56 @@
-Before we begin, please watch [this](https://giphy.com/clips/hamlet-jJjb9AUHOiP3nJJMdy) very important video be sure to unmute it by hovering over it.
+Antes de comenzar, por favor mira este video -> es importante que te asegures de activar el sonido colocando el cursor sobre la el icono de altavoz.
 
-Okay, once that's out of the way let's move on!
+Bien, una vez que eso esté fuera del camino, ¡sigamos adelante!
 
-We're going to kick things off w/ one of the most magical things about web3, connecting to a product with your wallet.
+Vamos a empezar con una de las cosas más mágicas de web3, como conectarse a un producto con tu billetera virtual(wallet).
 
-We'll allow our user to essentially "auth" with their Solana wallet. Building auth is usually pretty hard. You need to have a database of usernames, password, etc.
+Esencialmente, permitiremos que nuestro usuarios puedan  "autenticar" con su billetera de Solana. Crear la autenticación suele ser bastante difícil. Necesitas tener una base de datos con nombres de los usuario, contraseña, etc.
 
-In this case it's **a lot** easier than you may think! Here's the plan:
+En este caso, ¡es mucho más fácil de lo que piensas! Este es el plan:
 
-1. Get the base web app code for this project (I provided some starter HTML/CSS so you can focus on the things that truly matter lol).
-2. Write the code that will allow users to connect their Solana wallet and connect to your app to setup a basic "auth" state.
-3. Hop into writing your first Solana program w/ Rust + deploy to the actual blockchain.
+1. Obten el código base de la aplicación web para este proyecto (incluimos algo de HTML / CSS basico para que puedas concentrarte en las cosas que realmente importan, jajaja).
+2. Escribe el código que permitirá a los usuarios conectar su billetera de Solana a tu aplicación para configurar un estado básico de "autenticación".
+3. Comienza a escribir tu primer programa de Solana con Rust + despliega tu aplicacion a el Blockchain.
+Va a ser bastante EMOCIONANTE.
 
-It's going to be **PRETTY HYPE.** 
+Una cosa que realmente amamos en buildspace es la creatividad que la gente pone en sus proyectos. Haz tuyo este proyecto y haz las cosas como mejor te parezca.
 
-One thing we really love at buildspace is the insane creativity people put into their projects. Make this project your own and do things however you see fit.
+Si todo lo que haces es copiar/pegar código, entonces esto no será tan divertido.
 
-**If all you're doing is copy/pasting code then this won't be that fun.**
+El código base de la aplicación web que proporcione es solo para comenzar. Cambia las cosas. Quizás odias los colores que usé. Cambialos. Tal vez quieras que el sitio tenga más temas de anime. Hazlo.
 
-The base web app code I provide is just to get you started. Change things up. Maybe you hate the colors I used. Change it. Maybe you want to make the site more anime themed. Do it.
+Si terminas cambiando las cosas, etiquétame en #progreso y dime - "Ey, Farza, mejore tu código " y dejame una captura de pantalla.
 
-If you end up changing things up, tag me in `#progress` and say -  "Yo Farza I made your code better" and drop a screenshot.
+Muy bien, hagamos esto.
 
-Alright - let's do this.
+🏁 Empezemos
+Usaremos React.js para crear nuestra aplicación web. Si ya está familiarizado con React, esto será muy sencillo. Si no has trabajado mucho con React, ¡no te preocupes! Aún puedes completar este proyecto, pero tal vez parezca un poco más complicado.
 
-### 🏁 **Getting started**
+¡Pero no te rindas! Cuanto más luchas, más aprendes 🧠.
 
-We are going to be using **React.js** to build our web app. If you are already familiar with React, this will be a breeze. If you haven't done much React, don't worry! You can still make it through this project, but it may feel a bit more difficult.
+Si no tienes experiencia con React,  mira esta serie de introducción a (https://scrimba.com/learn/learnreact) antes de comenzar con esta sección, o tal vez consulta los documentos de introducción aquí (https://reactjs.org/docs/getting-started.html). O no hagas nada especial, simplemente empieza. Lo que sea que funcione para ti :).
 
-Don't give up, though! The more you struggle the more you learn 🧠.
+¡Serás un Mago de React después de este proyecto, si aún no lo eres 🧙‍♂!
 
-If you have no experience w/ React - [checkout this intro series](https://scrimba.com/learn/learnreact) before you get started with this section or maybe check out the intro docs [here](https://reactjs.org/docs/getting-started.html). Or don't do anything special, just hop in. **Whatever works for you :).**
+⬇️ Obteniendo el código.
+¡Usaremos esta cosa llamada Replit (https://replit.com/~)!
 
-You'll be a React Wizard after this project if you aren't already 🧙‍♂!
+Es un navegador basado en IDE que nos permite crear fácilmente aplicaciones web e implementarlas desde el navegador.  Es super auténtico. En lugar de tener que configurar un entorno local y escribir comandos para desplegar el proyecto, todo esta ya integrado en Replit.
 
-### ⬇️ Getting the code.
+Nota: no tienes que usar replit para construir + desplegar tu proyecto. Si deseas trabajar localmente en VSCode y usar Vercel / Heroku / AWS para desplegar y estás seguro de tus habilidades de desarrollo web, eso es genial. Aquí está el enlace al repositorio base que puede clonar y trabajar localmente. (https://github.com/buildspace/gif-portal-starter)
 
-We'll be using this thing called [Replit](https://replit.com/~)!
+Si decides optar por Replit, crea una cuenta con ellos antes de continuar.
 
-It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.
+Ya he creado un proyecto de React básico que puedes clonar en Replit.
 
-Note: **You don't have to use replit to build + deploy your site. If you want to work locally on VSCode and use Vercel/Heroku/AWS to deploy and are confident in your web dev skills -- that's totally cool. [Here is the link](https://github.com/buildspace/gif-portal-starter) to the base repo you can clone and work on locally.**
+Simplemente haz clic aquí (https://replit.com/@adilanchian/gif-portal-starter-project?v=1) y cerca de la derecha verás el botón "Fork". Asegúrate de haber iniciado sesión, luego haz clic en esto.
 
-If you decide to go with Replit, make an account with them before moving on!
+Clonarás mágicamente mi repositorio y mi IDE completo en tu navegador para trabajar con el código. Una vez que deja de cargarse y te muestre el código, haz clic en "ejecutar" en la parte superior y estarás listo. Puede tomar de 2 a 4 minutos la primera vez que ejecutas el codigo.
 
-I've already created a basic react project that you can **fork** on Replit.
+Aquí hay un video rápido que hice para un proyecto diferente que repasa algunos conceptos básicos de Replit: (https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
+Y asi de fácil, ya tienes una configuración de interfaz para tu aplicación web3 😎.
 
-[Just click here](https://replit.com/@adilanchian/gif-portal-starter-project?v=1)**, and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
+🚨 Informe de progreso
+Por favor haz esto, de lo contrario Farza estará triste :(
 
-You'll magically clone my repo and full IDE in your browser to work with the code. Once it stops loading and shows you some code click "run" at the top and you're good to go. Might take 2-4 min the first time.
-
-**Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
-
-Here's a quick video I made for a different project going over some Replit basics:
-
-[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
-
-Just like that, you have a frontend setup for your web3 app 😎.
-
-### 🚨 Progress Report
-
-*Please do this else Farza will be sad :(*
-
-Post a screenshot of your starter web app in `#progress` :).
-**
+Publique una captura de pantalla de tu aplicación web en #progreso :). **
