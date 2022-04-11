@@ -1,4 +1,4 @@
-Antes de comenzar, por favor mira este video -> es importante que te asegures de activar el sonido colocando el cursor sobre la el icono de altavoz.
+Antes de comenzar, por favor mira este video -> https://giphy.com/clips/hamlet-jJjb9AUHOiP3nJJMdy es importante que te asegures de activar el sonido colocando el cursor sobre la el icono de altavoz.
 
 Bien, una vez que eso esté fuera del camino, ¡sigamos adelante!
 
