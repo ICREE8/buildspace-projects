@@ -114,7 +114,7 @@ mapping(uint256 => CharacterAttributes) public nftHolderAttributes;
 mapping(address => uint256) public nftHolders;
 ```
 
-`nftHolderAttributes` will be where we store the state of the player's NFTs. We map the the NFT's id to a `CharacterAttributes` struct.
+`nftHolderAttributes` will be where we store the state of the player's NFTs. We map the NFT's id to a `CharacterAttributes` struct.
 
 Remember, every player has their own character NFT. And, every single NFT has their own state like `HP`, `Attack Damage`, etc! So if Player #172 owns a "Pikachu" NFT and their Pikachu NFT loses health in a battle **then only Player 172's Pikachu NFT should be changed** everyone else's Pikachu should stay the same! So, we store this player character level data in a map.
 
