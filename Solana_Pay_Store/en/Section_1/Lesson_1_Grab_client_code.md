@@ -56,7 +56,7 @@ That's it! From there go ahead and run:
 npm install
 ```
 
-This may error if you don't have Node installed, which you can install via NVM by following [these instructions](https://github.com/nvm-sh/nvm#installing-and-updating).
+This may give you an error if you don't have Node installed, which you can install via NVM by following [these instructions](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 Now you can run the web app locally with:
 
